@@ -1,0 +1,9 @@
+body{
+    background-color: antiquewhite;
+}
+.content{
+    display: inline-block;
+}
+.gift{
+    margin: 60px;
+}
