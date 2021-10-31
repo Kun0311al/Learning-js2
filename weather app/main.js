@@ -18,7 +18,13 @@ let weather = {
             document.querySelector(".discription").innerHTML = description;
             document.querySelector(".humidity").innerHTML = `Humidity : ${humidity}%`;
             document.querySelector(".wind").innerHTML = `wind Speed : ${speed} km/h`;
-            }
+            },
+        search: function(){
+            this.fetchWeather(document.querySelector(".search-bar").value);
+        }
     };
-let input = document.getElementsByClassName("search-bar").value
+let input = document.getElementsByClassName("search-bar").value;
+document.querySelector(".getData").addEventListener("click",function(){
+    weather.search();
+})
 
