@@ -59,3 +59,15 @@ input{
     align-items: center;
     margin: 0;
 }
+.weather.loading{
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading:after{
+    visibility: visible;
+    content: "Please Wait....";
+    color:white;
+    position: absolute;
+    top:0;
+}

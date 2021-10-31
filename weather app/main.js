@@ -18,6 +18,7 @@ let weather = {
             document.querySelector(".discription").innerHTML = description;
             document.querySelector(".humidity").innerHTML = `Humidity : ${humidity}%`;
             document.querySelector(".wind").innerHTML = `wind Speed : ${speed} km/h`;
+            document.querySelector(".weather").classList.remove("loading");
             },
         search: function(){
             this.fetchWeather(document.querySelector(".search-bar").value);
@@ -26,5 +27,10 @@ let weather = {
 let input = document.getElementsByClassName("search-bar").value;
 document.querySelector(".getData").addEventListener("click",function(){
     weather.search();
+});
+document.querySelector(".search-bar").addEventListener("keyup",function(event){
+    if(event.key == "Enter"){
+        weather.search()
+    }
 })
-
+// weather.fetchWeather("Mumbai")
